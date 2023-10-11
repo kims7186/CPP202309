@@ -32,7 +32,7 @@ int main() {
 	for (int i = 0; i < numcell; i++) {	
 		int j = 0;
 		for (int value :numList[i]) {	
-			int value = numList[i][j];
+			value = numList[i][j];
 			if (value > max) {
 				max = value;
 				maxI = i;
