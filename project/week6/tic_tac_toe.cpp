@@ -46,7 +46,7 @@ int main() {
 		//3-2. 입력 받은 좌표에 돌이 차있는지 체크 
 		if (board[x][y] != ' ') {
 			cout << x << ", " << y << ": 이미 돌이 차있습니다." << endl; // 오류 메시지 출력
-			continue; //(x,y)whkvy 다시 입력 받기 
+			continue; //(x,y)좌표 다시 입력 받기 
 		}
 
 		//4. 입력받은 좌표에 현재 유저의 돌 놓기(유효성 검사 통과)
@@ -67,7 +67,8 @@ int main() {
 			cout << endl;
 		}
 		cout << "---|---|---" << endl;
-		k++;
+		
+		
 
 		//6. 모든 칸이 다 찼는지 체크 
 		int checked = 0; // 보드판이 다 찼는지 여부를 체크하는 변수 
@@ -93,7 +94,7 @@ int main() {
 				cout << " 가로에 모두 돌이 놓였습니다!: "; 
 				isWin = true; // 승자 정하기 (가로)
 			}
-			if(board[0][i] == currentUser && board[1][i]==currentUser && board[3][i] == currentUser){
+			if(board[0][i] == currentUser && board[1][i]==currentUser && board[2][i] == currentUser){
 				cout << " 세로에 모두 돌이 놓였습니다!: ";
 				isWin = true; // 승자 정하기 (세로)
 			}
@@ -104,7 +105,7 @@ int main() {
 			cout << " 왼쪽 위에서 오른쪽 아래 대각선으로 모두 돌이 놓였습니다!: ";
 			isWin = true; //승자정하기 (대각선)
 		}
-		if (board[0][0] == currentUser && board[1][1] == currentUser && board[2][2] == currentUser) {
+		if (board[0][2] == currentUser && board[1][1] == currentUser && board[2][0] == currentUser) {
 			cout << "오른쪽 위에서 왼쪽 아래 대각선으로 모두 돌이 놓였습니다!";
 			isWin = true;//승자정하기 (대각선) 
 		}
@@ -116,7 +117,8 @@ int main() {
 			break; // 더이상 사용자의 입력을 받지 않음
 
 		}
-
+		k++;
+		
 	}
 	return 0;
 
