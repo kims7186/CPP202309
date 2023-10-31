@@ -22,7 +22,7 @@ int main() {
 		//평가
 		if (myans == ans) {
 			cout << "맞았습니다." << endl;
-			i++
+			i++;
 		}
 		else cout << "틀렸습니다." << endl;
 		
